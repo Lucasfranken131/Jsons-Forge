@@ -16,7 +16,7 @@ public class CreateBlock extends CreateFile {
         writeFile(texto, nomeArquivo);
     }
 
-    public void createBlockState() {
+    private void createBlockState() {
         String nomeArquivo = "assets/" + nomeMod + "/blockstates/" + nomeItem + ".json";
         String[] texto = {
             "{",

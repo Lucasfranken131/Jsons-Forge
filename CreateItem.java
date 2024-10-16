@@ -33,4 +33,30 @@ public class CreateItem extends CreateFile {
 
         writeFile(texto, nomeArquivo);
     }
+
+    public void create3DToolItem() {
+        String[] texto = {
+            "{",
+            "   \"parent\": \"minecraft:item/handheld\",",
+            "   \"loader\": \"forge:separate_transforms\",",
+            "   \"base\": {",
+            "       \"parent\": \"" + nomeMod + ":item/" + nomeItem + "_3d\"",
+            "    },",
+            "   \"perspectives\": {",
+            "       \"gui\": {",
+            "           \"parent\": \"" + nomeMod + ":item/" + nomeItem + "_2d\"",
+            "       },",
+            "       \"ground\": {",
+            "           \"parent\": \"" + nomeMod + ":item/" + nomeItem + "_2d\"",
+            "       },",
+            "       \"fixed\": {",
+            "           \"parent\": \"" + nomeMod + ":item/" + nomeItem + "_2d\"",
+            "       }",
+            "    }",
+            "}"
+        };
+        writeFile(texto, nomeArquivo);
+        nomeArquivo = "assets/"+ nomeMod + "/models/items/" + nomeItem + "_2d.json";
+        createToolItem();
+    }
 }
