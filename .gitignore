@@ -1,0 +1,4 @@
+assets/Anvil.ico
+main.bat
+# Só para o git não puxar as classes
+*.class
